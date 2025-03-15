@@ -7,7 +7,7 @@ import * as THREE from 'three'
 import ImageModal from './ImageModal'
 
 const isMobile = window.innerWidth < 768;
-const RADIUS = isMobile ? 3 : 4;
+const RADIUS = isMobile ? 2.5 : 4;
 const IMAGE_COUNT = 19  // Updated to include all images
 const AUTO_ROTATE_SPEED = 0.0005
 
@@ -96,8 +96,8 @@ function GlobeScene({ onImageClick }: { onImageClick: (url: string) => void }) {
   const [autoRotate, setAutoRotate] = useState(true)
 
   const isMobile = window.innerWidth < 768;
-  const minDistance = isMobile ? 5 : 6;
-  const maxDistance = isMobile ? 10 : 12;
+  const minDistance = isMobile ? 4 : 6;
+  const maxDistance = isMobile ? 8 : 12;
 
   useEffect(() => {
     if (camera instanceof THREE.PerspectiveCamera) {
@@ -187,7 +187,7 @@ export default function Globe() {
   return (
     <div style={{ width: '100%', height: '100%', position: 'relative' }}>
       <Canvas
-        camera={{ position: [0, 0, 8], fov: 60 }}
+        camera={{ position: [0, 0, isMobile ? 6 : 8], fov: isMobile ? 50 : 60 }}
         style={{ width: '100%', height: '100%' }}
         dpr={[1, 2]}
         performance={{ min: 0.5 }}

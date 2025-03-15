@@ -6,12 +6,14 @@ import { motion } from 'framer-motion'
 const Globe = dynamic(() => import('../components/Globe'), { ssr: false })
 
 export default function Home() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  
   return (
     <div style={{ width: '100vw', height: '100vh', backgroundColor: 'white', position: 'relative', overflow: 'hidden' }}>
       <h1 
         style={{ 
           position: 'absolute',
-          top: '2.5rem',
+          top: isMobile ? '1.5rem' : '2.5rem',
           left: '50%',
           transform: 'translateX(-50%)',
           fontSize: '0.5625rem',
@@ -34,7 +36,7 @@ export default function Home() {
       <div
         style={{
           position: 'absolute',
-          bottom: '2.5rem',
+          bottom: isMobile ? '1.5rem' : '2.5rem',
           left: '50%',
           transform: 'translateX(-50%)',
           textAlign: 'center',
