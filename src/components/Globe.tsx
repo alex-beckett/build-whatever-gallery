@@ -6,7 +6,8 @@ import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import ImageModal from './ImageModal'
 
-const RADIUS = 4
+const isMobile = window.innerWidth < 768;
+const RADIUS = isMobile ? 3 : 4;
 const IMAGE_COUNT = 19  // Updated to include all images
 const AUTO_ROTATE_SPEED = 0.0005
 
@@ -94,6 +95,10 @@ function GlobeScene({ onImageClick }: { onImageClick: (url: string) => void }) {
   const groupRef = useRef<THREE.Group>(null)
   const [autoRotate, setAutoRotate] = useState(true)
 
+  const isMobile = window.innerWidth < 768;
+  const minDistance = isMobile ? 5 : 6;
+  const maxDistance = isMobile ? 10 : 12;
+
   useEffect(() => {
     if (camera instanceof THREE.PerspectiveCamera) {
       camera.position.z = 8
@@ -168,8 +173,8 @@ function GlobeScene({ onImageClick }: { onImageClick: (url: string) => void }) {
         enableDamping={true}
         dampingFactor={0.08}
         rotateSpeed={0.5}
-        minDistance={4}
-        maxDistance={12}
+        minDistance={minDistance}
+        maxDistance={maxDistance}
         zoomSpeed={0.3}
       />
     </>

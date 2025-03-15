@@ -27,7 +27,7 @@ export default function Home() {
         Build Whatever
       </h1>
 
-      <div style={{ position: 'absolute', top: '6rem', bottom: '6rem', left: 0, right: 0 }}>
+      <div className="globe-container">
         <Globe />
       </div>
 
