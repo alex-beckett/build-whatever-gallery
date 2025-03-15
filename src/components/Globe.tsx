@@ -12,7 +12,7 @@ const IMAGE_COUNT = 19  // Updated to include all images
 const AUTO_ROTATE_SPEED = 0.0005
 
 // Pre-create geometries and materials to avoid recreation on each render
-const planeGeometry = new THREE.PlaneGeometry(1.2, 1.2)
+const planeGeometry = new THREE.PlaneGeometry(isMobile ? 0.9 : 1.2, isMobile ? 0.9 : 1.2)
 const textureLoader = new THREE.TextureLoader()
 const textures = new Map()
 
