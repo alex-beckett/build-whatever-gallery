@@ -36,13 +36,15 @@ export default function Home() {
       <div
         style={{
           position: 'absolute',
-          bottom: isMobile ? '1.5rem' : '2.5rem',
+          bottom: isMobile ? '1rem' : '2.5rem',
           left: '50%',
           transform: 'translateX(-50%)',
           textAlign: 'center',
           width: '100%',
           zIndex: 10,
-          fontFamily: 'Helvetica Neue Ultra Light, sans-serif'
+          fontFamily: 'Helvetica Neue Ultra Light, sans-serif',
+          backgroundColor: 'white',
+          padding: '0.5rem 0'
         }}
       >
         <a 
@@ -56,7 +58,8 @@ export default function Home() {
             textTransform: 'uppercase',
             letterSpacing: '0.05em',
             border: '1px solid black',
-            padding: '4px 8px'
+            padding: '4px 8px',
+            backgroundColor: 'white'
           }}
         >
           Twitter
