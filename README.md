@@ -1,6 +1,6 @@
-# Build Whatever Globe
+# Build Whatever Globe Gallery
 
-An interactive 3D globe visualization built with Next.js, Three.js, and TypeScript. The globe displays a collection of images arranged in a spherical pattern that users can interact with through rotation and clicking.
+An interactive 3D globe gallery showcasing the Build Whatever collection.
 
 ## Features
 
