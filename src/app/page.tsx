@@ -13,7 +13,7 @@ export default function Home() {
       <h1 
         style={{ 
           position: 'absolute',
-          top: isMobile ? '1.5rem' : '2.5rem',
+          top: isMobile ? '1.25rem' : '2.5rem',
           left: '50%',
           transform: 'translateX(-50%)',
           fontSize: '0.5625rem',
@@ -36,7 +36,7 @@ export default function Home() {
       <div
         style={{
           position: 'fixed',
-          bottom: isMobile ? '1rem' : '2.5rem',
+          bottom: isMobile ? '1.75rem' : '2.5rem',
           left: '50%',
           transform: 'translateX(-50%)',
           textAlign: 'center',

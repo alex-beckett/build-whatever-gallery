@@ -59,7 +59,7 @@ body {
 
 @media (max-width: 768px) {
   .globe-container {
-    top: 2.5rem;
-    bottom: 3rem;
+    top: 2.75rem;
+    bottom: 3.25rem;
   }
 } 
