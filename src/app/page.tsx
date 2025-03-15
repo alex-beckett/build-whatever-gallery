@@ -36,7 +36,7 @@ export default function Home() {
       <div
         style={{
           position: 'fixed',
-          bottom: isMobile ? '1.4rem' : '2.5rem',
+          bottom: isMobile ? '1rem' : '2.5rem',
           left: '50%',
           transform: 'translateX(-50%)',
           textAlign: 'center',
