@@ -13,7 +13,7 @@ export default function Home() {
       <h1 
         style={{ 
           position: 'absolute',
-          top: isMobile ? '1.25rem' : '2.5rem',
+          top: isMobile ? '1.75rem' : '2.5rem',
           left: '50%',
           transform: 'translateX(-50%)',
           fontSize: '0.5625rem',
@@ -33,40 +33,42 @@ export default function Home() {
         <Globe />
       </div>
 
-      <div
-        style={{
-          position: 'fixed',
-          bottom: isMobile ? '1rem' : '2.5rem',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          textAlign: 'center',
-          width: '100%',
-          zIndex: 20,
-          fontFamily: 'Helvetica Neue Ultra Light, sans-serif',
-          backgroundColor: 'white',
-          padding: '0.5rem 0',
-          pointerEvents: 'auto'
-        }}
-      >
-        <a 
-          href="https://x.com/celestia"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ 
-            color: 'black', 
-            textDecoration: 'none',
-            fontSize: '0.5625rem',
-            textTransform: 'uppercase',
-            letterSpacing: '0.05em',
-            border: '1px solid black',
-            padding: '4px 8px',
+      {!isMobile && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: '2.5rem',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            textAlign: 'center',
+            width: '100%',
+            zIndex: 20,
+            fontFamily: 'Helvetica Neue Ultra Light, sans-serif',
             backgroundColor: 'white',
-            display: 'inline-block'
+            padding: '0.5rem 0',
+            pointerEvents: 'auto'
           }}
         >
-          Twitter
-        </a>
-      </div>
+          <a 
+            href="https://x.com/celestia"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ 
+              color: 'black', 
+              textDecoration: 'none',
+              fontSize: '0.5625rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em',
+              border: '1px solid black',
+              padding: '4px 8px',
+              backgroundColor: 'white',
+              display: 'inline-block'
+            }}
+          >
+            Twitter
+          </a>
+        </div>
+      )}
     </div>
   )
 } 
