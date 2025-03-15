@@ -53,11 +53,13 @@ body {
   bottom: 4rem;
   left: 0;
   right: 0;
+  pointer-events: auto;
+  z-index: 10;
 }
 
 @media (max-width: 768px) {
   .globe-container {
     top: 2.5rem;
-    bottom: 2.5rem;
+    bottom: 3rem;
   }
 } 
